@@ -5,6 +5,7 @@ This script will install **AceD v1.5**.
 ***
 
 ## Installation:
+Log into the server using ssh (Putty for windows or terminal for Mac users) and run the following commands:
 ```
 wget -q https://raw.githubusercontent.com/cryptosharks131/AceD/master/aced_install.sh
 bash aced_install.sh
