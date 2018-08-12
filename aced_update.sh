@@ -22,6 +22,7 @@ function update_sentinel() {
 function update_node() {
   echo -e "Preparing to download updated $COIN_NAME"
   rm /usr/local/bin/aced*
+  rm ~/.acedcore/peers.dat
   cd $TMP_FOLDER
   wget -q $COIN_REPO
   compile_error
