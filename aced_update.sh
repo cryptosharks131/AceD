@@ -3,7 +3,7 @@
 TMP_FOLDER=$(mktemp -d)
 COIN_DAEMON='/usr/local/bin/acedd'
 COIN_CLI='/usr/local/bin/aced-cli'
-COIN_REPO='35.197.96.235/v1.6_fork.tar.gz'
+COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/1.6/v1.6_fork.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
 #COIN_BS='http://bootstrap.zip'
