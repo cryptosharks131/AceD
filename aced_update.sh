@@ -110,7 +110,6 @@ EOF
 
 function important_information() {
  systemctl start $COIN_NAME.service
- aced-cli addnode "149.28.60.139" add
  echo
  echo -e "================================================================================================================================"
  echo -e "$COIN_NAME Masternode is updated and running again!"
