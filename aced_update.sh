@@ -6,7 +6,7 @@ COIN_CLI='/usr/local/bin/aced-cli'
 COIN_REPO='35.197.96.235/v17_fork.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
-#COIN_BS='http://bootstrap.zip'
+COIN_BS='35.197.96.235/bootstrap.tar.gz'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -22,7 +22,6 @@ function update_sentinel() {
 function update_node() {
   echo -e "Preparing to download updated $COIN_NAME"
   rm /usr/local/bin/aced*
-  rm -r ~/.acedcore/peers.dat ~/.acedcore/blocks/ ~/.acedcore/chainstate/
   cd $TMP_FOLDER
   wget -q $COIN_REPO
   compile_error
@@ -117,6 +116,6 @@ clear
 checks
 prepare_system
 update_node
-#import_bootstrap
+import_bootstrap
 #update_sentinel
 important_information
