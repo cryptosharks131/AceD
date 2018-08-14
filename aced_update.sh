@@ -89,7 +89,7 @@ function import_bootstrap() {
   wget -q $COIN_BS
   compile_error
   COIN_ZIP=$(echo $COIN_BS | awk -F'/' '{print $NF}')
-  unzip $COIN_ZIP >/dev/null 2>&1
+  tar -xvf $COIN_ZIP >/dev/null 2>&1
   compile_error
   cp -r ~/bootstrap/blocks ~/.acedcore/blocks
   cp -r ~/bootstrap/chainstate ~/.acedcore/chainstate
