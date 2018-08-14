@@ -266,7 +266,7 @@ function import_bootstrap() {
   compile_error
   cp -r ~/bootstrap/blocks ~/.acedcore/blocks
   cp -r ~/bootstrap/chainstate ~/.acedcore/chainstate
-  cp -r ~/bootstrap/peers.dat ~/.acedcore/peers.dat
+  #cp -r ~/bootstrap/peers.dat ~/.acedcore/peers.dat
   rm -r ~/bootstrap/
   rm $COIN_ZIP
 }
