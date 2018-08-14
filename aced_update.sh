@@ -104,8 +104,8 @@ function import_bootstrap() {
 function update_config() {
   sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
-  addnode=149.28.60.139
-  EOF
+addnode=149.28.60.139
+EOF
 }
 
 function important_information() {
