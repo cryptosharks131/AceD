@@ -1,6 +1,8 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
+CONFIG_FILE='aced.conf'
+CONFIGFOLDER='/root/.acedcore'
 COIN_DAEMON='/usr/local/bin/acedd'
 COIN_CLI='/usr/local/bin/aced-cli'
 COIN_REPO='35.197.96.235/v17_fork.tar.gz'
@@ -99,6 +101,13 @@ function import_bootstrap() {
   echo -e "Sync is complete"
 }
 
+function update_config() {
+  sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
+  cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
+  addnode=149.28.60.139
+  EOF
+}
+
 function important_information() {
  systemctl start $COIN_NAME.service
  aced-cli addnode "149.28.60.139" add
@@ -118,5 +127,6 @@ checks
 prepare_system
 update_node
 import_bootstrap
+update_config
 #update_sentinel
 important_information
