@@ -5,11 +5,11 @@ CONFIG_FILE='aced.conf'
 CONFIGFOLDER='/root/.acedcore'
 COIN_DAEMON='/usr/local/bin/acedd'
 COIN_CLI='/usr/local/bin/aced-cli'
-COIN_REPO='35.197.96.235/v17_fork.tar.gz'
+COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/1.7/v17_fork.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
 COIN_PORT=24126
-#COIN_BS='35.197.96.235/bootstrap.tar.gz'
+#COIN_BS='bootstrap.tar.gz'
 
 
 NODEIP=$(curl -s4 icanhazip.com)
