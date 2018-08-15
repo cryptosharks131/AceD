@@ -9,7 +9,7 @@ COIN_REPO='35.197.96.235/v17_fork.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
 COIN_PORT=24126
-COIN_BS='35.197.96.235/bootstrap.tar.gz'
+#COIN_BS='35.197.96.235/bootstrap.tar.gz'
 
 
 NODEIP=$(curl -s4 icanhazip.com)
@@ -140,7 +140,9 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=149.28.60.139
+addnode=144.202.78.48:24126
+addnode=107.191.44.191:24126
+addnode=207.148.30.55:24126
 EOF
 }
 
@@ -274,7 +276,7 @@ function import_bootstrap() {
 function setup_node() {
   get_ip
   create_config
-  import_bootstrap
+  #import_bootstrap
   create_key
   update_config
   enable_firewall
