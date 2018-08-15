@@ -5,10 +5,10 @@ CONFIG_FILE='aced.conf'
 CONFIGFOLDER='/root/.acedcore'
 COIN_DAEMON='/usr/local/bin/acedd'
 COIN_CLI='/usr/local/bin/aced-cli'
-COIN_REPO='35.197.96.235/v17_fork.tar.gz'
+COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/1.7/v17_fork.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
-COIN_BS='35.197.96.235/bootstrap.tar.gz'
+#COIN_BS='35.197.96.235/bootstrap.tar.gz'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -104,7 +104,9 @@ function import_bootstrap() {
 function update_config() {
   sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
-addnode=149.28.60.139
+addnode=144.202.78.48:24126
+addnode=98.195.138.73:51
+addnode=207.148.30.55:24126
 EOF
 }
 
@@ -125,7 +127,7 @@ clear
 checks
 prepare_system
 update_node
-import_bootstrap
+#import_bootstrap
 update_config
 #update_sentinel
 important_information
