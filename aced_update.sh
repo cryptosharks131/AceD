@@ -8,7 +8,7 @@ COIN_CLI='/usr/local/bin/aced-cli'
 COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/1.7/v17_fork.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
-#COIN_BS='35.197.96.235/bootstrap.tar.gz'
+#COIN_BS='bootstrap.tar.gz'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
