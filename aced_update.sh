@@ -5,7 +5,7 @@ CONFIG_FILE='aced.conf'
 CONFIGFOLDER='/root/.acedcore'
 COIN_DAEMON='/usr/local/bin/acedd'
 COIN_CLI='/usr/local/bin/aced-cli'
-COIN_REPO='https://github.com/cryptosharks131/AceD/releases/download/v1.8.1/Aced.tar.gz'
+COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/v1.9/v19_linux_static.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
 #COIN_BS='bootstrap.tar.gz'
@@ -112,6 +112,10 @@ EOF
 }
 
 function important_information() {
+ $COIN_DAEMON -daemon -reindex
+ sleep 15
+ $COIN_CLI stop
+ sleep 5
  systemctl start $COIN_NAME.service
  echo
  echo -e "================================================================================================================================"
