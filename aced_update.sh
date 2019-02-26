@@ -87,14 +87,6 @@ pkill -9 acedd
 clear
 }
 
-function update_config() {
-  sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
-  sed -i '/connect=*/d' $CONFIGFOLDER/$CONFIG_FILE
-  cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
-addnode=144.202.78.48:24126
-EOF
-}
-
 function import_bootstrap() {
   rm -r ~/.acedcore/blocks ~/.acedcore/chainstate ~/.acedcore/peers.dat
   wget -q $COIN_BS
