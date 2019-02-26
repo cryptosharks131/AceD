@@ -87,7 +87,7 @@ pkill -9 acedd
 clear
 }
 
-function update_config() {	
+function update_config() {
   sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
   sed -i '/connect=*/d' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
