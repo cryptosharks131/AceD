@@ -5,7 +5,7 @@ CONFIG_FILE='aced.conf'
 CONFIGFOLDER='/root/.acedcore'
 COIN_DAEMON='/usr/local/bin/acedd'
 COIN_CLI='/usr/local/bin/aced-cli'
-COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/v2.0/aced-linux-v2.0.tar.gz
+COIN_REPO='https://github.com/Acedcoin/AceD/releases/download/v2.0/aced-linux-v2.0.tar.gz'
 #SENTINEL_REPO='https://github.com/cryptosharks131/sentinel'
 COIN_NAME='AceD'
 #COIN_BS='bootstrap.tar.gz'
@@ -87,6 +87,16 @@ pkill -9 acedd
 clear
 }
 
+function update_config() {	
+  sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
+  sed -i '/connect=*/d' $CONFIGFOLDER/$CONFIG_FILE
+  cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
+addnode=144.202.78.48:24126
+addnode=107.191.44.191:24126
+addnode=207.148.30.55:24126
+EOF	
+}
+
 function import_bootstrap() {
   rm -r ~/.acedcore/blocks ~/.acedcore/chainstate ~/.acedcore/peers.dat
   wget -q $COIN_BS
@@ -124,6 +134,6 @@ checks
 prepare_system
 update_node
 #import_bootstrap
-#update_config
+update_config
 #update_sentinel
 important_information
