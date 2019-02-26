@@ -94,7 +94,7 @@ function update_config() {
 addnode=144.202.78.48:24126
 addnode=107.191.44.191:24126
 addnode=207.148.30.55:24126
-EOF	
+EOF
 }
 
 function import_bootstrap() {
