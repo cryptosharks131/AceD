@@ -102,16 +102,6 @@ function import_bootstrap() {
   echo -e "Sync is complete"
 }
 
-function update_config() {
-  sed -i '/addnode=*/d' $CONFIGFOLDER/$CONFIG_FILE
-  sed -i '/connect=*/d' $CONFIGFOLDER/$CONFIG_FILE
-  cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
-addnode=144.202.78.48:24126
-addnode=107.191.44.191:24126
-addnode=207.148.30.55:24126
-EOF
-}
-
 function important_information() {
  $COIN_DAEMON -daemon -reindex
  sleep 15
