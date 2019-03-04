@@ -118,6 +118,8 @@ function important_information() {
  $COIN_CLI stop >/dev/null 2>&1
  sleep 5
  systemctl start $COIN_NAME.service
+ sleep 20
+ $COIN_CLI mnsync reset >/dev/null 2>&1
  echo
  echo -e "================================================================================================================================"
  echo -e "$COIN_NAME Masternode is updated and running again!"
