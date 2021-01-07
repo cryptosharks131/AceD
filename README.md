@@ -73,7 +73,3 @@ cd /sentinel
 SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
 ```
 ***
-
-## Tip Jar:  
-
-**AceD**: AUxZpb1BpczT4pzfN7fYh6HxKEvwPL2SxK  
